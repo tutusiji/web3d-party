@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import WaterTreeScene from '../components/WaterTreeScene.tsx';
+import WaterTreeScene from '../components/WaterTreeScene';
 
 const WaterTree: React.FC = () => {
     return (

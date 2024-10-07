@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './pages/Home.tsx';
-import WaterTree from './pages/WaterTree.tsx';
+import Home from './pages/Home';
+import WaterTree from './pages/WaterTree';
 
 const App: React.FC = () => {
     return (
@@ -22,7 +22,7 @@ const App: React.FC = () => {
                     {/* <Route path="/demos/space" element={<Space />} /> */}
                 </Routes>
             </div>
-        </Router>
+        </Router >
     );
 }
 
