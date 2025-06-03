@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: "bundle.js", // 输出文件名
     path: path.resolve(__dirname, "dist"), // 输出目录
-    publicPath: "/demo/web3d/", // 修改这里
+    publicPath: "/", // 修改为根路径，适合本地开发
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
@@ -44,7 +44,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      //   publicPath: "/demo/web3d/", // 添加这行
+      // 确保HTML中的资源路径正确
+      favicon: "./public/logo.svg"
     }),
     new webpack.DefinePlugin({
       "process.env.PUBLIC_URL": JSON.stringify(""),
@@ -55,9 +56,9 @@ module.exports = {
       directory: path.join(__dirname, "public"),
     },
     compress: true,
-    port: 3000,
+    port: 3001, // 修改端口为3001
     hot: true,
-    historyApiFallback: true, // 简化这里
+    historyApiFallback: true, // 对于SPA应用路由
   },
   stats: {
     errorDetails: true,
